@@ -34,6 +34,9 @@ if [ -d /opt/opendj/bootstrap/config/schema/ ]; then
   done
 fi
 
+# this one clashes with our own 'user'
+rm /opt/opendj/config/schema/99-*.ldif
+
 /opt/opendj/bin/start-ds
 
 # There are multiple types of ldif files.
