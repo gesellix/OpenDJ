@@ -9,11 +9,11 @@
 
 cd /opt/opendj
 
-#if default data folder exists do not change it
-if [ ! -d ./db ]; then
-  echo "/opt/opendj/data" >/opt/opendj/instance.loc && \
-  mkdir -p /opt/opendj/data/lib/extensions
-fi
+# if default data folder exists do not change it
+#if [ ! -d ./db ]; then
+#  echo "/opt/opendj/data" >/opt/opendj/instance.loc &&
+#    mkdir -p /opt/opendj/data/lib/extensions
+#fi
 
 # Instance dir does not exist? Then we need to run setup
 if [ ! -d ./data/config ]; then
